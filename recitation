@@ -1,16 +1,14 @@
-What pieces of code help versus obscure your understanding of the algorithm?
-What comments might be helpful within the code?
-Are there places where the code could be more concise and also more clear?
+Readability
+1) Some pieces of code that obscure our understanding of the algorithm are the two chunks of code in the main method of the Bins class that look very similar and have a lot of repetitive code, as it makes it hard to distinguish the algorithms.  In addition, having lots of print statements amidst the algorithm code is distracting. On the other hand, it would be helpful to understanding the algorithm to have pieces of code with comments that explain what the code does, like in the Disk class where there are clear comments.
+2) It would be useful to have comments delineating where each heuristic exists in the code.  It would also be useful to have comments clarifying what chunks of code, like in the for loops, for example, do. 
+3) There could be clearer and more concise code in the Bins class under the main method, as there are a lot of lengthy for loops.  
 
 Testability
-How would you test this code for bugs?
-Give a specific example of a "test case" as the code is currently written.
-What additional functions may be helpful?
-Give a specific example of a "test case" for your new function.
+1) To test this code for bugs, you could run on different files. 
+2) An example of a “test case” could be one with file sizes that produce very different results based on the sorting order to ensure each algorithm works differently.  For example, 750000 100000 800000. 
+3) It would be helpful to have a function for each heuristic, one for the worst-fit decreasing method and one for the worst-fit method.  It may also be useful to have a function that adds and removes from the priority queue as the for loop conditions require, since that code is repeptitive.
+4) Test cases for this would be the same because you jsut need to ensure the heuristic work.
 
 Extensibility
-What Code Smells can you find?
-What suggestions does this code make about how someone would extend it in the future to compare the performance of a wider variety of fitting algorithms?
-What dependencies are there between different parts of the code?
-How easy to find are those dependencies?
-Can you clarify or remove those dependencies?
+
+There is duplicate code here for each of the for loops in dealing with adding files to disks according to each heuristic.  The two for loops are almost identical except for the if condition, so these chunks of codes may benefit from being placed into a function that is simply reused for each heuristic.  The print statements could also be put into a function since they print the same things, except for one tweak specifying the method being printed which can just be specified via a parameter.  The Bins class also has lazy code because the main function contains all of the code instead of creating separate functions to do all of it. 
