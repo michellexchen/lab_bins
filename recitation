@@ -1,0 +1,16 @@
+What pieces of code help versus obscure your understanding of the algorithm?
+What comments might be helpful within the code?
+Are there places where the code could be more concise and also more clear?
+
+Testability
+How would you test this code for bugs?
+Give a specific example of a "test case" as the code is currently written.
+What additional functions may be helpful?
+Give a specific example of a "test case" for your new function.
+
+Extensibility
+What Code Smells can you find?
+What suggestions does this code make about how someone would extend it in the future to compare the performance of a wider variety of fitting algorithms?
+What dependencies are there between different parts of the code?
+How easy to find are those dependencies?
+Can you clarify or remove those dependencies?
