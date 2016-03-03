@@ -1,10 +1,9 @@
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Scanner;
+import java.util.function.Function;
 
 /**
  * Runs a number of algorithms that try to fit files onto disks.
@@ -69,7 +68,11 @@ public class Bins {
         
         printInfo(total, pq); 
     }
-    
+    	
+    public List<Integer> fitDisksAndPrint(List<Integer> myList, Function<List<Integer>,List<Integer>> func){
+    	List list  = func.apply(myList);
+    	return list;
+    }
     
     /**
      * The main program.
